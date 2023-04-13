@@ -1,7 +1,7 @@
 // write a Cloudflare page function to only origins in the allowedOrigins array to access the
 
 // A list of allowed origins that can access our backend API
-const allowedOrigins = ['https://pizza-58c.pages.dev', 'http://localhost:9000'];
+const allowedOrigins = ['https://pizza2.pages.dev', 'http://localhost:9000'];
 
 // A function that returns a set of CORS headers
 const corsHeaders = (origin) => ({
@@ -57,5 +57,5 @@ async function handleRequest(request) {
     modifiedResponse.headers.set('Access-Control-Allow-Origin', headers_Origin);
     return modifiedResponse;
   }
-  return new Response.redirect('https://pizza-58c.pages.dev');
+  return new Response.redirect('https://pizza2.pages.dev');
 }
